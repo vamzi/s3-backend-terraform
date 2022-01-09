@@ -1,0 +1,9 @@
+.terraform
+*.lock.hcl
+*.lock.info
+*.tfstate*
+*.tfvars
+*plan.txt
+*.tfplan
+.terraform-version
+*.log
