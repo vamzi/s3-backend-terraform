@@ -2,15 +2,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
-  lower   = true
-  upper   = false
-}
-
 locals {
-  aws_s3_terraform_lock = "aws-eks-fid-${random_string.suffix.result}"
+  aws_s3_terraform_lock = "stackit-${var.stackId}"
 }
 
 resource "aws_s3_bucket" "terraform_state" {
